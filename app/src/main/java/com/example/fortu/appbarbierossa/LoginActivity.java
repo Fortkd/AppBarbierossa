@@ -3,6 +3,7 @@ package com.example.fortu.appbarbierossa;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -155,7 +156,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         // Store values at the time of the login attempt.
         String email = mEmailView.getText().toString();
         String password = mPasswordView.getText().toString();
-
+        boolean pax = false;
+        boolean user = false;
         boolean cancel = false;
         View focusView = null;
 
@@ -168,7 +170,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             mPasswordView.setError(getString(R.string.error_invalid_password));
             focusView = mPasswordView;
             cancel = true;
-        }
+        } else pax=true;
 
         // Check for a valid email address.
         if (TextUtils.isEmpty(email)) {
@@ -179,7 +181,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             mEmailView.setError(getString(R.string.error_invalid_email));
             focusView = mEmailView;
             cancel = true;
-        }
+        }  else user=true;
 
         if (cancel) {
             // There was an error; don't attempt login and focus the first
@@ -192,6 +194,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             mAuthTask = new UserLoginTask(email, password);
             mAuthTask.execute((Void) null);
         }
+
+        if(user && pax){
+            Intent openMain=new Intent(LoginActivity.this,MainActivity.class); //Definisce l'Intente(intenzione)di aprire il main
+            startActivity(openMain); //Apre il main in seguito al click su tasto "Accedi"
+        }
     }
 
     private boolean isEmailValid(String email) {
@@ -201,7 +208,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
     private boolean isPasswordValid(String password) {
         //TODO: Replace this with your own logic
-        return password.length() > 4;
+        return password.length() > 5;
     }
 
     /**
