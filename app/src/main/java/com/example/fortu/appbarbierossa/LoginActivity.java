@@ -91,6 +91,14 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             }
         });
 
+        Button signInButton = (Button) findViewById(R.id.reg_button);
+        signInButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                signIn();
+            }
+        });
+
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
     }
@@ -199,6 +207,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             Intent openMain=new Intent(LoginActivity.this,MainActivity.class); //Definisce l'Intente(intenzione)di aprire il main
             startActivity(openMain); //Apre il main in seguito al click su tasto "Accedi"
         }
+    }
+
+    private void signIn() {
+        Intent openMain=new Intent(LoginActivity.this,activity_registrazione.class);
+        startActivity(openMain); //Apre il main in seguito al click su tasto "Accedi"
     }
 
     private boolean isEmailValid(String email) {

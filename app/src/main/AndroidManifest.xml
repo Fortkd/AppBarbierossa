@@ -16,8 +16,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="Barbierossa Barbershop">
-        </activity>
+            android:label="Barbierossa Barbershop"></activity>
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login">
@@ -27,6 +26,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity_registrazione"></activity>
     </application>
 
 </manifest>

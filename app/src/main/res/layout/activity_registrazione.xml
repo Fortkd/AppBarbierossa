@@ -4,89 +4,98 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Registrazione"
-    tools:layout_editor_absoluteY="81dp">
+    tools:context=".activity_registrazione">
 
     <EditText
-        android:id="@+id/password"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="1dp"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:selectAllOnFocus="false"
-        app:layout_constraintEnd_toEndOf="@+id/editText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
-
-    <EditText
-        android:id="@+id/editText3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="23dp"
-        android:ems="10"
-        android:hint="Cognome"
-        android:inputType="textPersonName"
-        android:selectAllOnFocus="false"
-        android:singleLine="false"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4" />
-
-    <EditText
-        android:id="@+id/editText4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:id="@+id/nome_reg"
+        android:layout_width="286dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="25dp"
         android:ems="10"
         android:hint="Nome"
         android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/cognome_reg"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
 
     <EditText
-        android:id="@+id/editText5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
+        android:id="@+id/cognome_reg"
+        android:layout_width="286dp"
+        android:layout_height="51dp"
         android:ems="10"
-        android:hint="gg/mm/aaaa"
-        android:inputType="date"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        android:hint="Cognome"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/cel_reg"
+        app:layout_constraintStart_toStartOf="@+id/nome_reg"
+        app:layout_constraintTop_toBottomOf="@+id/nome_reg" />
 
     <EditText
-        android:id="@+id/editText7"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:id="@+id/cel_reg"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
         android:ems="10"
         android:hint="Cellulare"
         android:inputType="phone"
-        app:layout_constraintEnd_toEndOf="@+id/password"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText5" />
+        app:layout_constraintBottom_toTopOf="@+id/data_reg"
+        app:layout_constraintStart_toStartOf="@+id/cognome_reg"
+        app:layout_constraintTop_toBottomOf="@+id/cognome_reg" />
 
     <EditText
-        android:id="@+id/editText"
-        android:layout_width="248dp"
+        android:id="@+id/data_reg"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
+        android:layout_marginBottom="38dp"
+        android:ems="10"
+        android:hint="GG/MM/AAAA"
+        android:inputType="date"
+        app:layout_constraintBottom_toTopOf="@+id/mail_reg"
+        app:layout_constraintStart_toStartOf="@+id/cel_reg"
+        app:layout_constraintTop_toBottomOf="@+id/cel_reg" />
+
+    <EditText
+        android:id="@+id/mail_reg"
+        android:layout_width="279dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
         android:ems="10"
         android:hint="Email"
         android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/pax_reg"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText7" />
+        app:layout_constraintTop_toBottomOf="@+id/data_reg" />
+
+    <EditText
+        android:id="@+id/pax_reg"
+        android:layout_width="wrap_content"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/paxConf_reg"
+        app:layout_constraintStart_toStartOf="@+id/mail_reg"
+        app:layout_constraintTop_toBottomOf="@+id/mail_reg" />
+
+    <EditText
+        android:id="@+id/paxConf_reg"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginBottom="120dp"
+        android:ems="10"
+        android:hint="Conferma password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/pax_reg"
+        app:layout_constraintTop_toBottomOf="@+id/pax_reg" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="36dp"
+        android:layout_width="136dp"
+        android:layout_height="51dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="52dp"
         android:text="Registrati"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/password" />
-
+        app:layout_constraintEnd_toEndOf="parent" />
 </android.support.constraint.ConstraintLayout>
