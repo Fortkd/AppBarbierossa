@@ -204,14 +204,14 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         }
 
         if(user && pax){
-            Intent openMain=new Intent(LoginActivity.this,MainActivity.class); //Definisce l'Intente(intenzione)di aprire il main
+            Intent openMain=new Intent(LoginActivity.this,MainActivity.class); //Definisce l'intenzione di aprire il mainActivity
             startActivity(openMain); //Apre il main in seguito al click su tasto "Accedi"
         }
     }
 
     private void signIn() {
-        Intent openMain=new Intent(LoginActivity.this,activity_registrazione.class);
-        startActivity(openMain); //Apre il main in seguito al click su tasto "Accedi"
+        Intent openMain=new Intent(LoginActivity.this,activity_registrazione.class);//Definisce l'intenzione di aprire registrazione_activity
+        startActivity(openMain); //Apre registrazione_activity
     }
 
     private boolean isEmailValid(String email) {
