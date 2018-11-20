@@ -4,55 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity_registrazione">
+    tools:context=".activity_registrazione"
+    tools:layout_editor_absoluteY="81dp">
 
     <EditText
         android:id="@+id/nome_reg"
-        android:layout_width="286dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginTop="25dp"
         android:ems="10"
         android:hint="Nome"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/cognome_reg"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="spread_inside" />
+        app:layout_constraintEnd_toEndOf="@+id/cognome_reg"
+        app:layout_constraintStart_toStartOf="@+id/cognome_reg"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/cognome_reg"
         android:layout_width="286dp"
-        android:layout_height="51dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
         android:ems="10"
         android:hint="Cognome"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/cel_reg"
-        app:layout_constraintStart_toStartOf="@+id/nome_reg"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nome_reg" />
 
     <EditText
         android:id="@+id/cel_reg"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:layout_marginBottom="83dp"
         android:ems="10"
         android:hint="Cellulare"
         android:inputType="phone"
-        app:layout_constraintBottom_toTopOf="@+id/data_reg"
+        app:layout_constraintBottom_toTopOf="@+id/mail_reg"
         app:layout_constraintStart_toStartOf="@+id/cognome_reg"
         app:layout_constraintTop_toBottomOf="@+id/cognome_reg" />
-
-    <EditText
-        android:id="@+id/data_reg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="38dp"
-        android:ems="10"
-        android:hint="GG/MM/AAAA"
-        android:inputType="date"
-        app:layout_constraintBottom_toTopOf="@+id/mail_reg"
-        app:layout_constraintStart_toStartOf="@+id/cel_reg"
-        app:layout_constraintTop_toBottomOf="@+id/cel_reg" />
 
     <EditText
         android:id="@+id/mail_reg"
@@ -64,12 +54,12 @@
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toTopOf="@+id/pax_reg"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/data_reg" />
+        app:layout_constraintTop_toBottomOf="@+id/cel_reg" />
 
     <EditText
         android:id="@+id/pax_reg"
         android:layout_width="wrap_content"
-        android:layout_height="47dp"
+        android:layout_height="0dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
@@ -80,22 +70,23 @@
     <EditText
         android:id="@+id/paxConf_reg"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginBottom="120dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="17dp"
         android:ems="10"
         android:hint="Conferma password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/signin_button"
         app:layout_constraintStart_toStartOf="@+id/pax_reg"
         app:layout_constraintTop_toBottomOf="@+id/pax_reg" />
 
     <Button
         android:id="@+id/signin_button"
         android:layout_width="136dp"
-        android:layout_height="51dp"
+        android:layout_height="0dp"
         android:layout_marginEnd="28dp"
         android:layout_marginBottom="52dp"
         android:text="Registrati"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paxConf_reg" />
 </android.support.constraint.ConstraintLayout>
