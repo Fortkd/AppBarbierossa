@@ -19,4 +19,5 @@
     <!-- Strings related to registrazione -->
     <string name="error_invalid_phone">Numero non valido</string>
     <string name="error_wrong_password">La password non coincide</string>
+    <string name="home">Home</string>
 </resources>
