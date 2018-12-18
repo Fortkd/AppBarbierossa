@@ -3,6 +3,7 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Prenota</string>
     <string name="title_notifications">Notifications</string>
+    <string name="title_profile">Profilo</string>
     <string name="title_activity_login">Barbierossa Barbershop</string>
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
@@ -20,4 +21,5 @@
     <string name="error_invalid_phone">Numero non valido</string>
     <string name="error_wrong_password">La password non coincide</string>
     <string name="home">Home</string>
+    <string name="prenota">Prenota</string>
 </resources>

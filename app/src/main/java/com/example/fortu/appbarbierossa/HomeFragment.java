@@ -7,8 +7,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
-public class HomeFragment extends Fragment{
+public class HomeFragment extends Fragment {
 
     @Nullable
     @Override
