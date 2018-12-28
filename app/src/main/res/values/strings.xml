@@ -22,4 +22,10 @@
     <string name="error_wrong_password">La password non coincide</string>
     <string name="home">Home</string>
     <string name="prenota">Prenota</string>
+    <!-- String related to prenotazione -->
+    <string-array name="servizio">
+        <item>Taglio</item>
+        <item>Barba</item>
+        <item>Taglio e Barba</item>
+    </string-array>
 </resources>
